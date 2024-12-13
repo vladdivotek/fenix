@@ -7,7 +7,10 @@
         <p class="card-text mb-3">{{ $product->summary ?? '' }}</p>
         <div class="d-flex justify-content-between align-items-center">
             <b style="color: red;">{{ $product->price }}</b>
-            <button type="button" class="btn btn-outline-danger" aria-label="{{ __('Buy') }}">{{ __('Buy') }}</button>
+            <input type="number" class="form-control" min="1" value="{{ 1 }}">
+            <button type="button" class="btn btn-outline-danger" aria-label="{{ __('Buy') }}">
+                {{ __('Buy') }}
+            </button>
         </div>
     </div>
 </div>

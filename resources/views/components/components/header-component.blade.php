@@ -1,9 +1,17 @@
 <header class="header">
     <div class="container">
-        <div class="header-actions">
+        <div class="d-flex align-items-center justify-content-between w-100">
             @if(!$user)
                 @livewire('login-button')
             @endif
+            <div class="d-flex align-items-center position-relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                </svg>
+                <span id="cart_quantity" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+            </div>
         </div>
     </div>
 </header>
