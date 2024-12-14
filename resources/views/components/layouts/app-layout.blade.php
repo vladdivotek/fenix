@@ -15,14 +15,20 @@
 
 <body>
 
-<x-components.header-component />
-
 <main class="container mt-5 mb-5">
     {{ $slot }}
 </main>
 
 @livewireScripts
 @vite('resources/js/app.js')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('product-added', event => {
+            alert(`Product "${event.detail[0].name}" successfully added to cart!`);
+            Livewire.dispatch('refreshCart');
+        });
+    });
+</script>
 
 </body>
 </html>
